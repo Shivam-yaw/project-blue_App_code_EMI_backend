@@ -13,7 +13,7 @@ def calculate_emi():
     years = int(data.get('years'))
 
     monthly_interest = annual_interest / 12 / 100
-    months = years * 24
+    months = years * 12
 
     emi = principal * monthly_interest * math.pow((1 + monthly_interest), months) / (math.pow((1 + monthly_interest), months) - 1)
     total_payment = emi * months
